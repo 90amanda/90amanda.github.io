@@ -362,6 +362,16 @@ h3 {
 
 <script type="text/javascript">
 var myVar;
+
+if(document.readyState === 'ready' || document.readyState === 'complete') {
+  showPage();
+} else {
+  document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+      showPage();
+    }
+  }
+}
   
 function myFunction() {
   myVar = setTimeout(showPage, 3000);
