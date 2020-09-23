@@ -364,13 +364,13 @@ h3 {
 var myVar;
 
 if(document.readyState === 'ready' || document.readyState === 'complete') {
-  window.alert("here1");
-  showPage();
+  console.log("here1");
+  //showPage();
 } else {
-  window.alert("here2");
+  console.log("here2");
   document.onreadystatechange = function () {
     if (document.readyState == "complete") {
-      window.alert("here3");
+      console.log("here3");
       showPage();
     }
   }
